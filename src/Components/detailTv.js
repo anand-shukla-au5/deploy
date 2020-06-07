@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css'
 import { connect } from 'react-redux'
 class Detailtv extends React.Component {
     render() {

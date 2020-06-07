@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from './Components/nav'
 import Tvshows from './Components/tvshows'
 import Movies from './Components/movies'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Detailmovie from './Components/detailMovie'
 import Detailtv from './Components/detailTv'
@@ -25,6 +25,9 @@ function App(props) {
         <nav><Nav /></nav>
       </div>
       <main>
+        <Route path='/' strict exact >
+          <Redirect to='/movies'></Redirect>
+        </Route>
         <Route path="/tvshows" exact strict>
           <h1>TV Shows</h1>
           <Tvshows />
